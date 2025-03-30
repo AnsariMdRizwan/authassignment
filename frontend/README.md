@@ -1,54 +1,86 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+this is the list of the dependencies to install 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
+  "dependencies": {
+    "axios": "^1.8.4",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.55.0",
+    "react-router-dom": "^7.4.1"
   },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0"
+  }
+}
+
+
+to run the project locally you hva follow this command 
+1.npm install this will install all the required dependencies for the project 
+
+
+here is the technology stack that is used across the project are as follow 
+Frontend:
+React (with TypeScript) – for building UI components
+
+Vite – for fast development & build optimizations
+
+React Hook Form – for managing form validation
+
+React Router – for navigation
+
+Axios – for making API requests
+
+Tailwind CSS – for styling
+
+
+
+project structure are as follow 
+
+📦 my-auth-project  
+ ┣ 📂 src  
+ ┃ ┣ 📂 pages  
+ ┃ ┃ ┣ 📜 Home.tsx  # Home page (after login)  
+ ┃ ┃ ┣ 📜 Login.tsx  # Login page  
+ ┃ ┃ ┣ 📜 Register.tsx  # Registration page  
+
+ ┃ ┣ 📜 App.tsx  # Main application component  
+ ┃ ┣ 📜 main.tsx  # React entry point  
+ ┃ ┣ 📜 routes.tsx  # Defines all application routes  
+ ┣ 📂 public  
+ ┣ 📜 .env  # Environment variables  
+ ┣ 📜 tsconfig.json  # TypeScript configuration  
+ ┣ 📜 tailwind.config.js  # Tailwind CSS configuration  
+ ┣ 📜 package.json  # Dependencies & scripts  
+ ┗ 📜 vite.config.ts  # Vite configuration  
+
+
+
+this is all about the frontend project 
